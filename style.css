@@ -1,0 +1,112 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  height: 100vh;
+  background: radial-gradient(circle at center, #000 60%, #020824);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+/* Space Container */
+.space {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+/* Sun */
+.sun {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, #ffeb3b, #ff9800);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 40px #ff9800;
+}
+
+/* Orbits */
+.orbit {
+  position: absolute;
+  border: 1px dashed rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate linear infinite;
+}
+
+/* Individual Orbits */
+.mercury {
+  width: 120px;
+  height: 120px;
+  animation-duration: 4s;
+}
+
+.earth {
+  width: 200px;
+  height: 200px;
+  animation-duration: 8s;
+}
+
+.mars {
+  width: 280px;
+  height: 280px;
+  animation-duration: 12s;
+}
+
+/* Planets */
+.planet {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #4fc3f7;
+  border-radius: 50%;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Rotation Animation */
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  text-align: center;
+}
+
+.footer p {
+  font-size: 14px;
+  color: #bbb;
+  letter-spacing: 0.5px;
+}
+
+.footer span {
+  color: #ff9800;
+  font-weight: 600;
+}
